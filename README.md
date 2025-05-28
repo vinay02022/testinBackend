@@ -19,7 +19,7 @@ A Node.js backend service that handles user authentication, authorization, sessi
 - **Password Hashing**: bcryptjs
 - **Validation**: express-validator
 
-## Project Structure
+## Project Structure(build this with help of perplexity readme.md)
 
 ```
 ├── config/
@@ -59,7 +59,7 @@ A Node.js backend service that handles user authentication, authorization, sessi
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/vinay02022/testinBackend
    cd auth-comment-service
    ```
 
@@ -80,14 +80,15 @@ A Node.js backend service that handles user authentication, authorization, sessi
    
    Create a `.env` file with the following variables:
    ```env
-   PORT=3000
-   MONGODB_URI=mongodb://localhost:27017/auth-comment-service
-   JWT_ACCESS_SECRET=your_super_secret_access_key_here
-   JWT_REFRESH_SECRET=your_super_secret_refresh_key_here
-   JWT_ACCESS_EXPIRES_IN=15m
-   JWT_REFRESH_EXPIRES_IN=7d
-   RESET_TOKEN_EXPIRES_IN=1h
-   NODE_ENV=development
+  PORT=3000 
+MONGODB_URI=mongodb+srv://vinay123:vinay321@cluster0.mongodb.net/auth-comment-service?retryWrites=true&w=majority 
+JWT_ACCESS_SECRET=auth_comment_service_access_secret_2024_production_ready_key_12345  
+JWT_REFRESH_SECRET=auth_comment_service_refresh_secret_2024_production_ready_key_67890  
+JWT_ACCESS_EXPIRES_IN=15m  
+JWT_REFRESH_EXPIRES_IN=7d  
+RESET_TOKEN_EXPIRES_IN=1h  
+NODE_ENV=development 
+
    ```
 
 5. **Start MongoDB**
@@ -346,24 +347,6 @@ The API returns consistent error responses:
 }
 ```
 
-Common HTTP status codes:
-- `200`: Success
-- `201`: Created
-- `400`: Bad Request (validation errors)
-- `401`: Unauthorized (invalid/expired token)
-- `403`: Forbidden (insufficient permissions)
-- `404`: Not Found
-- `500`: Internal Server Error
-
-## Security Features
-
-- Password hashing with bcrypt (salt rounds: 12)
-- JWT tokens with expiration
-- Refresh token rotation
-- Input validation and sanitization
-- CORS enabled
-- Rate limiting ready (can be added)
-
 ## Database Schema
 
 ### User Model
@@ -420,17 +403,3 @@ Common HTTP status codes:
 3. Create middleware if needed in `middleware/`
 4. Define routes in `routes/`
 5. Update server.js to include new routes
-
-## Production Deployment
-
-1. Set `NODE_ENV=production`
-2. Use strong JWT secrets
-3. Configure MongoDB Atlas or production database
-4. Set up proper logging
-5. Add rate limiting
-6. Configure HTTPS
-7. Set up monitoring
-
-## License
-
-ISC License "# testinBackend" 
