@@ -19,7 +19,7 @@ A Node.js backend service that handles user authentication, authorization, sessi
 - **Password Hashing**: bcryptjs
 - **Validation**: express-validator
 
-## Project Structure
+## Project Structure(build this with help of perplexity readme.md)
 
 ```
 ├── config/
